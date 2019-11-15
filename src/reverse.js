@@ -1,10 +1,10 @@
 const readlineSync = require("readline-sync");
 
-let x = 1
-let y =  Number.MAX_SAFE_INTEGER;
+const MIN = 1;
+const MAX = Number.MAX_SAFE_INTEGER;
 
-while (x < 1 && x <= y) {
-    x = Number(readlineSync.question("\nPositive integer: "));
+let positiveInteger = Number(readlineSync.question("\nPositive integer: "));
+
+while Number.isNan(positiveInteger) || positiveInteger < MIN || positiveInteger > MAX || Number.isInteger(positiveInteger) {
+  positiveInteger = Number(readlineSync.question("\nPositive integer: "));
 }
-
-console.log("\n" + x + ".");

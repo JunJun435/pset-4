@@ -3,16 +3,16 @@ const readlineSync = require("readline-sync");
 const MIN = Number.MIN_SAFE_INTEGER;
 const MAX = Number.MAX_SAFE_INTEGER;
 
-let lower = Number(readlineSync.question("\nLower Bound: "));
-let upper = Number(readlineSync.question("Upper Bound: "));
+let lowerBound = Number(readlineSync.question("\nLower Bound: "));
+let upperBound = Number(readlineSync.question("Upper Bound: "));
 let sum = 0;
 
-while (lower >= upper || Number.isNaN(lower) || Number.isNaN(upper) || MIN > lower || MAX < upper || !Number.isInteger(lower) || !Number.isInteger(upper)) {
-  lower = Number(readlineSync.question("Lower Bound: "));
-  upper = Number(readlineSync.question("Upper Bound: "));
+while (lowerBound >= upperBound || Number.isNaN(lowerBound) || Number.isNaN(upperBound) || MIN > lowerBound || MAX < upperBound || !Number.isInteger(lowerBound) || !Number.isInteger(upperBound)) {
+  lowerBound = Number(readlineSync.question("Lower Bound: "));
+  upperBound = Number(readlineSync.question("Upper Bound: "));
 }
 
-for (let i = lower; i <= upper; i++) {
+for (let i = lowerBound; i <= upperBound; i++) {
   if (i % 2 === 0) {
     sum += i;
   }
