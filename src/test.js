@@ -16,4 +16,5 @@ function reverseNumber(number) {
   }
   return revNumber;
 }
+
 console.log(reverseNumber("\n" + revNumber + "."));
