@@ -8,7 +8,7 @@ let mario = readlineSync.question('\nHeight: ');
 while (mario < 1 || mario > 24) {
   mario = readlineSync.question("Height: ");
 
-  mario = parseInt(height);
+  mario = parseInt(mario);
 
   if (mario > 0 && mario <= 24) {
 
