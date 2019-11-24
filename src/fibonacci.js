@@ -9,12 +9,12 @@ do {
   input = Number(readlineSync.question("Positive integer: "));
 } while (input < MIN || input > MAX);
 
-let ratioOne = 1.618 ** input;
-let ratioTwo = 0.618 ** input;
+let firstNum = 1.618 ** input;
+let secondNum = 0.618 ** input;
 
-let goldenRuleOne = ratioOne - ratioTwo;
-let goldenRuleTwo = goldenRuleOne / 2.236;
-let goldenRule = Math.ceil(goldenRuleTwo);
-let fibonacciNumber = goldenRule.toLocaleString("en");
+let firstRule = firstNum - secondNum;
+let secondRule = firstRule / 2.236;
+let rule = Math.ceil(secondRule);
+let fibonacciNum = rule.toLocaleString("en");
 
-console.log("\n" + fibonacciNumber + ".")
+console.log("\n" + fibonacciNum + ".")
