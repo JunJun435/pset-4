@@ -1,30 +1,30 @@
-const readlineSync = require('readline-sync');
+const readlineSync = require ("readline-sync");
 
-let height = 0;
+const MIN = 1
+const MAX = 24
 
 console.log();
 
-while (height < 1 || height > 24) {
-  height = readlineSync.question("Height: ");
+do {
+  height = Number(readlineSync.question("Height: "));
+} while (height < MIN || height > MAX || Number.isNaN(height) || !Number.isInteger(height))
 
-  value = parseInt(height);
+console.log();
+length = height + 1;
+let luigi = "";
 
-  if (value > 0 && value <= 24) {
+for (let i = 2; i <= length; i++) {
+  for (let j = length - i; j > 0; j -= 1) {
+    luigi += " ";
+  }
+  for (let k = i; k > 0; k -= 1) {
+    luigi += "#";
+  }
+  luigi += "  ";
+  for (let k = i; k > 0; k -= 1) {
+    luigi += "#";
+  }
+  luigi += "\n";
+}
 
-    for (i = 1; i <= value; i++) {
-    var spaces = value - i;
-    var hashtags = i + 1;
-
-    var space = '';
-    var hashtag = '';
-
-    for( j = 1; j <= spaces; j++) {
-    space += ' ';
-    }
-    for( j = 1; j <= hashtags; j++ ) {
-    hashtag += '#';
-    }
-    console.log(space + hashtag + " " + hashtag);
-    }
-    }
-    }
+console.log(luigi);
