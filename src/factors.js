@@ -11,10 +11,10 @@ do {
 
 let display = "";
 let factor = 0;
-for (test = 1; test < input; test = test + 1) {
-  if (input % test == 0) {
-    factor = input / test;
-    display = display + test + factor + ", ";
+for (num = 1; num < input; num = num + 1) {
+  if (input % num == 0) {
+    factor = input / num;
+    display = display + num + factor + ", ";
   }
 }
 
